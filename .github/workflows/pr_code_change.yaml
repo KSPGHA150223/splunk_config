@@ -1,0 +1,20 @@
+name: PR Code Change Action
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  trigger_action:
+    name: Trigger Action on PR Code Change
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Add your action steps here that you want to trigger when code is changed in a PR
+      - name: Run your action
+        run: |
+          # Add your action command here
+
